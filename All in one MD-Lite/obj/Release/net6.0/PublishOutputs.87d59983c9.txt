@@ -1,0 +1,5 @@
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Release\net6.0\app.publish\All in one MD-Lite.exe
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Release\net6.0\app.publish\All in one MD-Lite.dll
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Release\net6.0\app.publish\All in one MD-Lite.deps.json
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Release\net6.0\app.publish\All in one MD-Lite.runtimeconfig.json
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Release\net6.0\app.publish\All in one MD-Lite.pdb

@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "dgSpecHash": "09QM5pD94CB6pqQ6X7S96uJcmZCe+mvivr1JhkhfoLL2fEwHDjmx+UCok36rIpsT4UiufiTIIjCvfL8SdOZ+RA==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\max\\Documents\\Github_Unbreakable\\readme-tools\\All-in-one Readme builder\\All in one MD Lite\\All in one MD-Lite\\All in one MD-Lite.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App.Runtime.win-x64. No packages exist with this id in source(s): C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.NETCore.App.Runtime.win-x64",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.WindowsDesktop.App.Runtime.win-x64. No packages exist with this id in source(s): C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.AspNetCore.App.Runtime.win-x64. No packages exist with this id in source(s): C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.AspNetCore.App.Runtime.win-x64",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1101",
+      "level": "Error",
+      "message": "Unable to find package Microsoft.NETCore.App.Crossgen2.win-x64. No packages exist with this id in source(s): C:\\Program Files\\dotnet\\library-packs, Microsoft Visual Studio Offline Packages",
+      "libraryId": "Microsoft.NETCore.App.Crossgen2.win-x64",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

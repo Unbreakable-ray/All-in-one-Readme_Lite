@@ -1,0 +1,15 @@
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\All in one MD-Lite.csproj.AssemblyReference.cache
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\All in one MD-Lite.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\All in one MD-Lite.AssemblyInfoInputs.cache
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\All in one MD-Lite.AssemblyInfo.cs
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\All in one MD-Lite.csproj.CoreCompileInputs.cache
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Debug\net6.0\All in one MD-Lite.exe
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Debug\net6.0\All in one MD-Lite.deps.json
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Debug\net6.0\All in one MD-Lite.runtimeconfig.json
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Debug\net6.0\All in one MD-Lite.dll
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\bin\Debug\net6.0\All in one MD-Lite.pdb
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\All in one MD-Lite.dll
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\refint\All in one MD-Lite.dll
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\All in one MD-Lite.pdb
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\All in one MD-Lite.genruntimeconfig.cache
+C:\Users\max\Documents\Github_Unbreakable\readme-tools\All-in-one Readme builder\All in one MD Lite\All in one MD-Lite\obj\Debug\net6.0\ref\All in one MD-Lite.dll

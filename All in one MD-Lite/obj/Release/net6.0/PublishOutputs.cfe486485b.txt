@@ -1,0 +1,5 @@
+C:\Users\max\Desktop\steam_writing_assistant\ss\All in one MD-Lite.exe
+C:\Users\max\Desktop\steam_writing_assistant\ss\All in one MD-Lite.dll
+C:\Users\max\Desktop\steam_writing_assistant\ss\All in one MD-Lite.deps.json
+C:\Users\max\Desktop\steam_writing_assistant\ss\All in one MD-Lite.runtimeconfig.json
+C:\Users\max\Desktop\steam_writing_assistant\ss\All in one MD-Lite.pdb

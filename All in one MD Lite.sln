@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "All in one MD-Lite", "All in one MD-Lite\All in one MD-Lite.csproj", "{0ADC731B-6B9B-435C-A2A8-4492DA2F48E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ADC731B-6B9B-435C-A2A8-4492DA2F48E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ADC731B-6B9B-435C-A2A8-4492DA2F48E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ADC731B-6B9B-435C-A2A8-4492DA2F48E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ADC731B-6B9B-435C-A2A8-4492DA2F48E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9975194A-0F9D-4904-B757-BB4CE3624872}
+	EndGlobalSection
+EndGlobal
