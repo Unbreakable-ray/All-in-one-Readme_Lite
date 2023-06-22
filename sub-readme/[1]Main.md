@@ -2,7 +2,7 @@
 
 Small light one-click software to auto-merge readme files `.MD` in the correct order.
 
-![image-20230622030211616](./sub-readme/readme-data/image-20230622030211616.png)
+![image-20230622030211616](./readme-data/image-20230622030211616.png)
 
 # Preparation:
 
@@ -23,16 +23,4 @@ Small light one-click software to auto-merge readme files `.MD` in the correct o
 # How to use:
 
 Simply just run it and the App will do Files merging automatically, after that, you need to press any key to exit.
-
-
-
-# Change log
-
-## 1.0.0
-
-  - Fixed a bug when `header.md` and `footer.md` and `author.md` files are missing.
-  - Added Extinction filtering support.
-
-
-Updated at 03:02:35 AM 2023/06/22	@xMaxrayx	@Unbreakable-ray
 
