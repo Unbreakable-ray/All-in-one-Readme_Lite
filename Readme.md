@@ -10,7 +10,7 @@ Small light one-click software to auto-merge readme files `.MD` in the correct o
 
   **Note**: if you want to edit them in a different location then you should make a shortcut to your wished place.
 
-  **Note**: don't put any files inside a child folder, this app doesn't support this future yet.
+  **Note**: don't put any files inside a child folder, this app doesn't support this future yet and wont merge them.
 
   <br><br><br>
 
