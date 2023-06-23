@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\All in one MD-Lite\\All in one MD-Lite.csproj": {}
+    "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\visual studio\\All in one MD-Lite\\All in one MD-Lite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\All in one MD-Lite\\All in one MD-Lite.csproj": {
+    "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\visual studio\\All in one MD-Lite\\All in one MD-Lite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\All in one MD-Lite\\All in one MD-Lite.csproj",
+        "projectUniqueName": "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\visual studio\\All in one MD-Lite\\All in one MD-Lite.csproj",
         "projectName": "All in one MD-Lite",
-        "projectPath": "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\All in one MD-Lite\\All in one MD-Lite.csproj",
+        "projectPath": "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\visual studio\\All in one MD-Lite\\All in one MD-Lite.csproj",
         "packagesPath": "C:\\Users\\max\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\All in one MD-Lite\\obj\\",
+        "outputPath": "C:\\Users\\max\\Documents\\Github_Unbreakable\\All-in-one-Readme_Lite\\visual studio\\All in one MD-Lite\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -12,7 +12,10 @@
     using System.Reflection.Metadata;
     using static System.Net.Mime.MediaTypeNames;
     using System.Diagnostics;
-using System.Reflection;
+    using System.Reflection;
+    using System;
+    using System.IO;
+    using System.Threading;
 
 
 
@@ -28,13 +31,17 @@ class Program
     {
 
 
+
+
+
+
         //------------------//start the engine//------------------//
         Console.OutputEncoding = Encoding.UTF8;
         //Dir//
 
         //get app location  
-        string appDir = AppDomain.CurrentDomain.BaseDirectory; //defult location
-        //string appDir = @"C:\Users\max\Desktop\steam_writing_assistant\sub-readme\App";
+        //string appDir = AppDomain.CurrentDomain.BaseDirectory; //defult location
+        string appDir = @"C:\Users\max\Desktop\steam_writing_assistant\sub-readme\App";
 
         //get files name on ../appDir/
         string path = Path.Combine(appDir, "..");
@@ -44,17 +51,21 @@ class Program
 
         string status = "no info";
         string status2 = "";
+        string statusOldReadmeBak = "There isn't old \"Readme.md\" found.";
         //Console.WriteLine(path);
         //Console.WriteLine(fullPath);
 
 
         var info ="";
+       ////////////////////////////////////////////////////////////////////////////
+        
+        
         //---------------------!!!MUST CHANGE!!!!!!----///
-        String appVersion = " v1";
+        String appVersion = " v1.1.0";
 
 
 
-
+        ////////////////////////////////////////////////////////////
         
         // system version
         OperatingSystem os = Environment.OSVersion;
@@ -156,20 +167,41 @@ class Program
 
         string mergedFile = Path.Combine(mergedFilePath, "Readme.md");
 
+        string oldMergedFile = Path.Combine(mergedFilePath, "oldReadme.bak.md");
 
-
+        string oldMergedFileRename;
 
         // Check if the merged file already exists
         if (File.Exists(mergedFile))
         {
-            // Find the next available number for the merged file
-            int i = 1;
-            while (File.Exists(Path.Combine(mergedFilePath, "Readme" + i + ".md")))
+            //check if old back exit
+            if (File.Exists(oldMergedFile)) //found oldreadme.bak
             {
-                i++;
+                // Find the next available number for the bak file
+                int i = 1;
+                while (File.Exists(Path.Combine(mergedFilePath, "oldReadme.bak" + i + ".md")))
+                {
+                    i++;
+
+                }
+
+                // Create a new name for file bak 
+                oldMergedFileRename = Path.Combine(mergedFilePath, "oldReadme.bak" + Convert.ToString(i) + ".md");
+                
+                
+                // rename redme to file.bak+(i)
+                File.Move(mergedFile, oldMergedFileRename);
+                statusOldReadmeBak = Path.GetFullPath(oldMergedFileRename);
             }
-            // Create a new file with the number
-            mergedFile = Path.Combine(mergedFilePath, "Readme" + Convert.ToString(i) + ".md");
+            else
+            {   // no old file  oldreadme.bak found
+                
+                File.Move(mergedFile, "oldReadme.bak.md");//rename
+
+                statusOldReadmeBak = Path.GetFileName(oldMergedFile); // dir by string 
+                mergedFile = Path.Combine(mergedFilePath, "Readme.md"); //for new readme file
+
+            }
         }
 
 
@@ -223,15 +255,19 @@ class Program
 
             }
             status = "Complated";
-            status2 = "\n\n\n\nThe Auto-merged file location is: " + (Path.GetFullPath(mergedFile));
+            status2 = "\n\nThe Auto-merged file location is: " + (Path.GetFullPath(mergedFile));
 
             ////good bye msg
             Console.WriteLine("[+][END]\tDone");
             Console.WriteLine("\n\n" + status + " at:\t" + DateTime.Now.ToString("hh:mm:ss tt") + "\t" + DateTime.Now.ToString("yyyy/MM/dd"));
             Console.WriteLine(status2);
-            Console.WriteLine("\nPress \"O\" or \"R\" key to Open the file Or Press any key to Exit.\nWaiting for key.....");
-
-
+            Console.WriteLine("\nAn old readme file was found and changed it's name:\t" + (statusOldReadmeBak));
+            Console.WriteLine("\nDone please chose:");
+            Console.WriteLine("- Press \"O\" or \"R\" key to Open the file Or Press any key to Exit.");
+            Console.WriteLine("- Press \"E\" to open file directory.");
+            Console.WriteLine("- Press \"Any key else\" to Exit.");
+            Console.WriteLine("\nWaiting for key.....");
+           
 
             key = Console.ReadKey(true); //exit or open
             if (key.KeyChar == 'o' || key.KeyChar == 'O' || key.KeyChar == 'r' || key.KeyChar == 'R')
@@ -245,6 +281,15 @@ class Program
 
 
             }
+
+            if (key.KeyChar == 'e' || key.KeyChar == 'E')
+            {
+
+                Process.Start("explorer.exe", mergedFilePath);
+            }
+
+
+
             else                                        //exit
             {
                 Console.WriteLine("\nOk have a good day <3 \t\t\t\t\t\t\t\t ^_^  <3");
@@ -271,13 +316,14 @@ class Program
             Console.WriteLine("[!][Warn]\tSome files are missing abroting\t(!)");
             status = "[!] Abroted";
             status2 = "[!] Make sure you have header.md, footer.md author.md in App Dirouctry";
-
+           
             Console.WriteLine("[!][EROR]\tMerging Opration is not complaited (!)");
             Console.WriteLine("[!][info]\tEnd of logs");
             Console.WriteLine("\n\n" + status + " at:\t" + DateTime.Now.ToString("hh:mm:ss tt") + "\t" + DateTime.Now.ToString("yyyy/MM/dd"));
             Console.WriteLine(status2);
-            Console.WriteLine("\n\n\nPress \"R\" key to Restart Or Press any key to Exit\nWaiting for key.....");
-           
+            Console.WriteLine("\n\n\nPress \"R\" key to Restart Or Press any key to Exit");
+            Console.WriteLine("\nWaiting for key.....");
+          
 
 
             key = Console.ReadKey(true);

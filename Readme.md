@@ -33,6 +33,33 @@ Simply just run it and the App will do Files merging automatically, after that, 
   - Fixed a bug when `header.md` and `footer.md` and `author.md` files are missing.
   - Added Extinction filtering support.
 
+# 
 
-Updated at 03:02:35 AM 2023/06/22	@xMaxrayx	@Unbreakable-ray
+# Image history (For fun).
+
+
+
+### 1.0.0.
+
+@xMaxrayx @Unbreakable-ray   at 14:19:00  on 23/6/2023   (24H Formart)  (UTC +2).
+
+------
+
+  My first idea for the logo I want something boxes and that blend together.
+
+![logo-row](./sub-readme/readme-data/logo-row.png)
+
+![logo-mod](./sub-readme/readme-data/logo-mod-1687522385738-2.png)
+
+I made `Ico` files for my app.
+
+![logo](./sub-readme/readme-data/logo.png)
+
+
+
+------
+
+
+
+Updated at 02:29:38 PM 2023/06/23	@xMaxrayx	@Unbreakable-ray
 
