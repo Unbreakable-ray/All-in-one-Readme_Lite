@@ -14,9 +14,9 @@
 
 - Add a new Icon.
 
-` @xMaxrayx @Unbreakable-ray   at 18:06:07  on 23/6/2023   (24H Formart)  (UTC +2)` .
+###### @xMaxrayx @Unbreakable-ray   at 18:06:07  on 23/6/2023   (24H Formart)  (UTC +2)
 
-[^kkkk]: kkkkkkkkkkkkkkkk
+
 
 
 
@@ -26,6 +26,5 @@
   - Fixed a bug when `header.md` and `footer.md` and `author.md` files are missing.
   - Added Extinction filtering support.
     -
-`````
-@xMaxrayx @Unbreakable-ray     on 22/6/2023  
-`````
+
+###### @xMaxrayx @Unbreakable-ray     on 22/6/2023  
