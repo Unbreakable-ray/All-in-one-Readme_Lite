@@ -1,6 +1,12 @@
 # All in one Readme merge app
 
-Small light one-click software to auto-merge readme files `.MD` in the correct order.
+Small light one-click software to auto-merge readme files `Text` `.MD` in the correct order.
+
+<img src="./readme-data/logo.png" alt="logo" style="zoom: 25%;" />
+
+
+
+<br><br><br><br>
 
 ![image-20230622030211616](./readme-data/image-20230622030211616.png)
 
