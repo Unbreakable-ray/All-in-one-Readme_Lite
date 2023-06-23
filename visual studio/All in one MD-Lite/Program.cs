@@ -16,20 +16,17 @@
     using System;
     using System.IO;
     using System.Threading;
-
-
-
-
-
 class Program
 {
+
+    
     static void Main(string[] args)
 
 
 
 
     {
-
+       
 
 
 
@@ -55,8 +52,8 @@ class Program
         //Console.WriteLine(path);
         //Console.WriteLine(fullPath);
 
-
-        var info ="";
+        
+        var info = "";
        ////////////////////////////////////////////////////////////////////////////
         
         
@@ -116,7 +113,7 @@ class Program
         //wolcome msg
         Console.WriteLine("\nWelcome,in \"All-in-one Lite\" .MD files Auto-merge software \t [version:" + appVersion + "]");
         Console.WriteLine("System: " + os + "\tArch: " + arch);
-        Console.WriteLine("\nby @xMxrayx & @Unbreakable-ray\n\n\n\nLogs:");
+        Console.WriteLine("\nby @xMxrayx & @Unbreakable-ray\n\nLogs:");
 
         //start logs msg
         Console.WriteLine("[+][Strt]\tStart logs");
@@ -133,7 +130,7 @@ class Program
         // Remove the double quotes from each extension
         string[] validExtensions = fileExtension.Split(' ').Select(x => x.Trim('"')).ToArray();
         // Print the values of the validExtensions array
-        Console.WriteLine("[+][info]\tValid extensions: " + string.Join(", ", validExtensions));
+        Console.WriteLine("[+][info]\tValid extensions are: " + string.Join(", ", validExtensions) + "\t(done)");
         string[] filesNames = Directory.EnumerateFiles(path) // Enumerate all files
                     .Where(file => validExtensions.Contains(Path.GetExtension(file))) // Filter by extension
                     .ToArray(); // Convert to array
@@ -187,11 +184,12 @@ class Program
 
                 // Create a new name for file bak 
                 oldMergedFileRename = Path.Combine(mergedFilePath, "oldReadme.bak" + Convert.ToString(i) + ".md");
-                
-                
+                string statusConsoleoldMergedFilename = Convert.ToString("oldReadme.bak" + Convert.ToString(i) + ".md");
+
                 // rename redme to file.bak+(i)
                 File.Move(mergedFile, oldMergedFileRename);
                 statusOldReadmeBak = Path.GetFullPath(oldMergedFileRename);
+                Console.WriteLine("[+][info]\tAn \"oldredme.bak\" file found and rename it to \"" + statusConsoleoldMergedFilename+"\"\t(done)");
             }
             else
             {   // no old file  oldreadme.bak found
@@ -200,6 +198,7 @@ class Program
 
                 statusOldReadmeBak = Path.GetFileName(oldMergedFile); // dir by string 
                 mergedFile = Path.Combine(mergedFilePath, "Readme.md"); //for new readme file
+                Console.WriteLine("[+][info]\tAn old redme file found and rename it to \"oldReadme.bak.md\"\t(done)");
 
             }
         }
@@ -207,9 +206,14 @@ class Program
 
 
 
-        //--------------------------//merge//-------------------------------//
-        ConsoleKeyInfo key; // Declare a ConsoleKeyInfo variable
 
+        //--------------------------//auto exit//-------------------------------//
+
+        
+       
+        
+        //--------------------------//merge//-------------------------------//
+        ConsoleKeyInfo key;
         try //do the work-------------------------------------------------------------------------------------------------------[file found]
         {
             string content;
@@ -266,8 +270,21 @@ class Program
             Console.WriteLine("- Press \"O\" or \"R\" key to Open the file Or Press any key to Exit.");
             Console.WriteLine("- Press \"E\" to open file directory.");
             Console.WriteLine("- Press \"Any key else\" to Exit.");
-            Console.WriteLine("\nWaiting for key.....");
+            Console.WriteLine("\nWaiting for key....... \nthe App will exit after 10 seconds..........");
+
+
+            //--------------------------//auto close//-------------------------------//
+            
+            Timer timer = new Timer(CloseProgram, null, 10000, Timeout.Infinite);
+            
+            static void CloseProgram(object? state)
+            {
+                Environment.Exit(0);
+            }
+       
+
            
+
 
             key = Console.ReadKey(true); //exit or open
             if (key.KeyChar == 'o' || key.KeyChar == 'O' || key.KeyChar == 'r' || key.KeyChar == 'R')
@@ -300,6 +317,7 @@ class Program
                 Environment.Exit(0);
 
             }
+           
 
 
 
@@ -323,7 +341,7 @@ class Program
             Console.WriteLine(status2);
             Console.WriteLine("\n\n\nPress \"R\" key to Restart Or Press any key to Exit");
             Console.WriteLine("\nWaiting for key.....");
-          
+           
 
 
             key = Console.ReadKey(true);
@@ -333,17 +351,17 @@ class Program
                 //info = Environment.GetCommandLineArgs()[0];
                 //info = Assembly.GetExecutingAssembly().Location;
 
-                info = Process.GetCurrentProcess().MainModule.FileName;
-
+                //info = Process.GetCurrentProcess().MainModule.FileName;
+                info = Environment.ProcessPath;
 
                 Console.WriteLine("\nRestarting .....\n"); //show restart msg
 
 
                 Thread.Sleep(500);
                 Console.WriteLine(info);
-                
+
                 Process.Start(new ProcessStartInfo(info));
-                
+                //Process.Start(new ProcessStartInfo(Environment.ProcessPath));
 
             }
             else
