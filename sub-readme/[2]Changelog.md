@@ -4,9 +4,9 @@
 
  
 
-[^at 17:53:26  on 23/6/2023]: 
+[17:58:39  23/6/2023]
 
-- Add the Open file directory Option.
+- the Open file directory Option.
 
 - Add Auto-Close future after 10 sec.
 
