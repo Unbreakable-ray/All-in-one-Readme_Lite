@@ -37,8 +37,8 @@ class Program
         //Dir//
 
         //get app location  
-        //string appDir = AppDomain.CurrentDomain.BaseDirectory; //defult location
-        string appDir = @"C:\Users\max\Desktop\steam_writing_assistant\sub-readme\App";
+        string appDir = AppDomain.CurrentDomain.BaseDirectory; //defult location
+       // string appDir = @"C:\Users\max\Desktop\steam_writing_assistant\sub-readme\App";
 
         //get files name on ../appDir/
         string path = Path.Combine(appDir, "..");
@@ -240,7 +240,7 @@ class Program
 
 
                 writer.Write(headerText);
-                writer.WriteLine("\nUpdated at " + DateTime.Now.ToString("hh:mm:ss tt yyyy/MM/dd") + "\t" + (authorText) + "\n");
+                writer.WriteLine("\nAuto-merged at " + DateTime.Now.ToString("hh:mm:ss tt yyyy/MM/dd") + "\t" + (authorText) + "\n");
                 writer.Write(footerText);
             }
 

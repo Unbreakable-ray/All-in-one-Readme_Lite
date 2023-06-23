@@ -4,8 +4,6 @@
 
  
 
-
-
 - Added Option to Open file directory .
 
 - Add Auto-Close future after 10 sec.
@@ -13,6 +11,10 @@
 - From now All-in-one will rename old files  `Readme.md` to `oldReadme.bak.md` .
 
 - Add a new Icon.
+
+- Change `Updated` to `Auto-merged`.
+
+- add `.bat` file to run the app instead of `.ink` (shortcut)
 
 ###### @xMaxrayx @Unbreakable-ray           at 18:06:07  on 23/6/2023    (24H Formart)  (UTC +2)
 
