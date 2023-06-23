@@ -14,9 +14,9 @@
 
 - Add a new Icon.
 
-````
-@xMaxrayx @Unbreakable-ray   at 18:06:07  on 23/6/2023   (24H Formart)  (UTC +2)
-````
+**Note:** @xMaxrayx @Unbreakable-ray   at 18:06:07  on 23/6/2023   (24H Formart)  (UTC +2)
+{: .note}
+
 
 ## 1.0.0
 
