@@ -218,7 +218,7 @@ class Program
 
         //--------------------------//merge//-------------------------------//
         ConsoleKeyInfo key;
-        string variable;
+        //string variable;
         string variable2;
         try //do the work-------------------------------------------------------------------------------------------------------[file found]
         {
@@ -292,94 +292,37 @@ class Program
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             /*
-            using (var sr = new StreamReader(mergedFile))
+            // Create a StreamReader object to read from a file
+            using (StreamReader sr = new StreamReader(mergedFile))
             {
-                // Read the stream line by line
-                string line;
-                // Declare and initialize a list to store the variables
-                List<string> variables = new List<string>();
-                List<string> variables2 = new List<string>();
-                while ((line = sr.ReadLine()) != null) ;
-                {
-                    // Check if the line starts with "#"
-                    if (line.StartsWith("#"))
-                    {
-                        // Remove the "#" and save it as a string variable
-                        string var = line.Substring(1);
-                        // Add the variable to the list
-                        variables.Add(var);
+                string input = sr.ReadToEnd();
+                  sr.Close();
 
-                        // Print the variable in the desired format
-                        ;
+                // Create a StreamWriter object to write to another file
+                using (StreamWriter sw = new StreamWriter(mergedFile, true))
+                {       
 
-                        string var2 = line.Substring(1);
-                        var2 = var2.Replace(" ", "-");
-                        variables2.Add(var2);
-
-                        
-
-
-                    }
-                }
-
-                // Close the stream reader
-                sr.Close();
-
-                // Use the StreamWriter constructor with the append parameter set to true
-                using (StreamWriter writer = new StreamWriter(mergedFile, true))
-                {
-                    // Loop through the list and write each variable to the file
-                    foreach (string var in variables)
-                    {
-                        foreach (string var2 in variables)
-                        {
-                            writer.WriteLine($"[{var}](#{var2}.)");
-                            Console.WriteLine($"[{var}](#{var2}.)");
-                        }
-                    }
                     
-                    // Close the stream writer
-                    writer.Close();
+                    // Read a line of text from the input file
+                     
+                    
+                    // Check if the line starts with "#"
+                    if (input.StartsWith("#"))
+                    {
+                        // Remove "#" and save it as a string variable
+                        string variable = input.TrimStart('#');
+                       
+                        sw.WriteLine("({0})[#{0}]", variable);
+                    }
                 }
             }
+
             */
 
 
 
 
-            //////////////////////////////////////////////write the readme.md
 
 
 
@@ -388,7 +331,89 @@ class Program
 
 
 
-            status = "Complated";
+
+
+
+
+
+
+
+
+
+
+
+                        
+                        using (var sr = new StreamReader(mergedFile))
+                        {
+                            // Read the stream line by line
+                            string line;
+                            // Declare and initialize a list to store the variables
+                            List<string> variables = new List<string>();
+                            
+                            while ((line = sr.ReadLine()) != null)
+                            {
+                                // Check if the line starts with "#"
+                                if (line.StartsWith("#"))
+                                {
+                                       string  var = line.TrimStart('#').TrimStart(); //remove all space bettwen #->litters
+                                     //    var = var.TrimStart(' ').TrimStart();
+                                        //  var = var.Replace(@"\s+", "");
+                                        //var = line.Substring(1);// Remove the "#" and save it as a string variable
+                                             var = var.Trim();
+                        ///manbalte var2
+
+                        string var2 = line;
+                        var2 = var2.Trim(); //remove space from start and end
+                        
+                        var2 = var2.Replace("#", "");//replace # with space
+                        var2 = var2.Trim();
+                        var2 = var2.ToLower();
+                        var2 =var2.Insert(0,"#");// add
+                        // var2 = var2.Replace(@"\s+", "-");
+                        var2 = var2.Replace(" ", "-");
+
+
+
+                        variables.Add($"[-{var}]({var2})\n");
+
+
+
+
+
+
+                                }
+                            }
+
+                            // Close the stream reader
+                            sr.Close();
+
+                            // Use the StreamWriter constructor with the append parameter set to true
+                            using (StreamWriter writer = new StreamWriter(mergedFile, true))
+                            {
+                                // Loop through the list and write each variable to the file
+                                    foreach (string var in variables)
+                                    {
+                                        writer.WriteLine(var);
+                                    }
+                                // Close the stream writer
+                                writer.Close();
+                            }
+                        }
+                        
+
+
+
+
+                        //////////////////////////////////////////////write the readme.md
+
+
+
+
+
+
+
+
+                        status = "Complated";
                 status2 = "\n\nThe Auto-merged file location is: " + (Path.GetFullPath(mergedFile));
 
                 ////good bye msg
