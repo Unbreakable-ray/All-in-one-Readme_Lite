@@ -16,6 +16,8 @@
     using System;
     using System.IO;
     using System.Threading;
+using All_in_one_MD_Lite;
+
 class Program
 {
 
@@ -37,8 +39,8 @@ class Program
         //Dir//
 
         //get app location  
-        string appDir = AppDomain.CurrentDomain.BaseDirectory; //defult location
-       // string appDir = @"C:\Users\max\Desktop\steam_writing_assistant\sub-readme\App";
+       // string appDir = AppDomain.CurrentDomain.BaseDirectory; //defult location
+       string appDir = @"C:\Users\max\Desktop\steam_writing_assistant\sub-readme\App";
 
         //get files name on ../appDir/
         string path = Path.Combine(appDir, "..");
@@ -204,36 +206,56 @@ class Program
         }
 
 
+        mergedFile = Path.Combine(mergedFilePath, "Readme.md");////////////////////////////////////////////////////////////////?wtf fix his maybe
+
 
 
 
         //--------------------------//auto exit//-------------------------------//
 
-        
-       
-        
+
+
+
         //--------------------------//merge//-------------------------------//
         ConsoleKeyInfo key;
+        string variable;
+        string variable2;
         try //do the work-------------------------------------------------------------------------------------------------------[file found]
         {
             string content;
             string headerText = File.ReadAllText(Path.Combine(appDir, "header.md"));
             string footerText = File.ReadAllText(Path.Combine(appDir, "footer.md"));
             string authorText = File.ReadAllText(Path.Combine(appDir, "author.md"));
-
+            
             Console.WriteLine("[+][info]\tStart merging opration ........ \t");
 
-            //lets coock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //merge all files in one and add new line
             using (StreamWriter writer = new StreamWriter(mergedFile))
             {
-                // Loop through the ordered files and append their content to the merged file
-                foreach (var file in orderedFiles)
+
+                foreach (var file in orderedFiles) //Loop through the ordered files and append their content to the merged file
                 {
                     using (StreamReader reader = new StreamReader(file))
                     {
                         writer.Write(reader.ReadToEnd());
-                        // Add a new line after each file content
-                        writer.WriteLine();
+                        writer.WriteLine();// Add a new line after each file content
+
                     }
                 }
 
@@ -244,13 +266,18 @@ class Program
                 writer.Write(footerText);
             }
 
-            //replace
+
+
+
+
+
+            ////////////////////////////////////////////////////////replace 
             using (StreamReader reader = new StreamReader(mergedFile))
             {
                 // Assign a new value to the content variable
                 content = reader.ReadToEnd();
                 content = content.Replace("./readme-data", "./sub-readme/readme-data");
-
+                Console.WriteLine("[!][info]\tchange text from ./readme-data\" to ./sub-readme/readme-data");
             }
 
             using (StreamWriter writer = new StreamWriter(mergedFile))
@@ -258,70 +285,174 @@ class Program
                 writer.Write(content);
 
             }
+
+
+            ///////////////////////////////////////////////////////////add tree
+            ///
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*
+            using (var sr = new StreamReader(mergedFile))
+            {
+                // Read the stream line by line
+                string line;
+                // Declare and initialize a list to store the variables
+                List<string> variables = new List<string>();
+                List<string> variables2 = new List<string>();
+                while ((line = sr.ReadLine()) != null) ;
+                {
+                    // Check if the line starts with "#"
+                    if (line.StartsWith("#"))
+                    {
+                        // Remove the "#" and save it as a string variable
+                        string var = line.Substring(1);
+                        // Add the variable to the list
+                        variables.Add(var);
+
+                        // Print the variable in the desired format
+                        ;
+
+                        string var2 = line.Substring(1);
+                        var2 = var2.Replace(" ", "-");
+                        variables2.Add(var2);
+
+                        
+
+
+                    }
+                }
+
+                // Close the stream reader
+                sr.Close();
+
+                // Use the StreamWriter constructor with the append parameter set to true
+                using (StreamWriter writer = new StreamWriter(mergedFile, true))
+                {
+                    // Loop through the list and write each variable to the file
+                    foreach (string var in variables)
+                    {
+                        foreach (string var2 in variables)
+                        {
+                            writer.WriteLine($"[{var}](#{var2}.)");
+                            Console.WriteLine($"[{var}](#{var2}.)");
+                        }
+                    }
+                    
+                    // Close the stream writer
+                    writer.Close();
+                }
+            }
+            */
+
+
+
+
+            //////////////////////////////////////////////write the readme.md
+
+
+
+
+
+
+
+
             status = "Complated";
-            status2 = "\n\nThe Auto-merged file location is: " + (Path.GetFullPath(mergedFile));
+                status2 = "\n\nThe Auto-merged file location is: " + (Path.GetFullPath(mergedFile));
 
-            ////good bye msg
-            Console.WriteLine("[+][END]\tDone");
-            Console.WriteLine("\n\n" + status + " at:\t" + DateTime.Now.ToString("hh:mm:ss tt") + "\t" + DateTime.Now.ToString("yyyy/MM/dd"));
-            Console.WriteLine(status2);
-            Console.WriteLine("\nAn old readme file was found and changed it's name:\t" + (statusOldReadmeBak));
-            Console.WriteLine("\nDone please chose:");
-            Console.WriteLine("- Press \"O\" or \"R\" key to Open the file Or Press any key to Exit.");
-            Console.WriteLine("- Press \"E\" to open file directory.");
-            Console.WriteLine("- Press \"Any key else\" to Exit.");
-            Console.WriteLine("\nWaiting for key....... \nthe App will exit after 10 seconds..........");
+                ////good bye msg
+                Console.WriteLine("[+][END]\tDone");
+                Console.WriteLine("\n\n" + status + " at:\t" + DateTime.Now.ToString("hh:mm:ss tt") + "\t" + DateTime.Now.ToString("yyyy/MM/dd"));
+                Console.WriteLine(status2);
+                Console.WriteLine("\nAn old readme file was found and changed it's name:\t" + (statusOldReadmeBak));
+                Console.WriteLine("\nDone please chose:");
+                Console.WriteLine("- Press \"O\" or \"R\" key to Open the file Or Press any key to Exit.");
+                Console.WriteLine("- Press \"E\" to open file directory.");
+                Console.WriteLine("- Press \"Any key else\" to Exit.");
+                Console.WriteLine("\nWaiting for key....... \nthe App will exit after 10 seconds..........");
 
 
-            //--------------------------//auto close//-------------------------------//
+                //--------------------------//auto close//-------------------------------//
+
+                Timer timer = new Timer(CloseProgram, null, 10000, Timeout.Infinite);
+
+                static void CloseProgram(object? state)
+                {
+                    Environment.Exit(0);
+                }
+
+
+
+
+
+                key = Console.ReadKey(true); //exit or open
+                if (key.KeyChar == 'o' || key.KeyChar == 'O' || key.KeyChar == 'r' || key.KeyChar == 'R')
+                {
+
+                    Console.WriteLine("\nOpenning ....."); //open file
+                    Thread.Sleep(1000);
+                    Process.Start(new ProcessStartInfo(mergedFile) { UseShellExecute = true });
+                    Thread.Sleep(1000);
+                    Environment.Exit(0);
+
+
+                }
+
+                if (key.KeyChar == 'e' || key.KeyChar == 'E')
+                {
+
+                    Process.Start("explorer.exe", mergedFilePath);
+                }
+
+
+
+                else                                        //exit
+                {
+                    Console.WriteLine("\nOk have a good day <3 \t\t\t\t\t\t\t\t ^_^  <3");
+                    Console.WriteLine("\nExiting...");
+
+                    //exit
+                    Thread.Sleep(1000);
+                    Environment.Exit(0);
+
+                }
+
+
+
+
+
             
-            Timer timer = new Timer(CloseProgram, null, 10000, Timeout.Infinite);
-            
-            static void CloseProgram(object? state)
-            {
-                Environment.Exit(0);
-            }
-       
-
-           
-
-
-            key = Console.ReadKey(true); //exit or open
-            if (key.KeyChar == 'o' || key.KeyChar == 'O' || key.KeyChar == 'r' || key.KeyChar == 'R')
-            {
-                
-                Console.WriteLine("\nOpenning ....."); //open file
-                Thread.Sleep(1000);
-                Process.Start(new ProcessStartInfo(mergedFile) { UseShellExecute = true });
-                Thread.Sleep(1000);
-                Environment.Exit(0);
-
-
-            }
-
-            if (key.KeyChar == 'e' || key.KeyChar == 'E')
-            {
-
-                Process.Start("explorer.exe", mergedFilePath);
-            }
-
-
-
-            else                                        //exit
-            {
-                Console.WriteLine("\nOk have a good day <3 \t\t\t\t\t\t\t\t ^_^  <3");
-                Console.WriteLine("\nExiting...");
-
-                //exit
-                Thread.Sleep(1000);
-                Environment.Exit(0);
-
-            }
-           
-
-
-
-
         }
 
 
@@ -334,19 +465,19 @@ class Program
             Console.WriteLine("[!][Warn]\tSome files are missing abroting\t(!)");
             status = "[!] Abroted";
             status2 = "[!] Make sure you have header.md, footer.md author.md in App Dirouctry";
-           
+
             Console.WriteLine("[!][EROR]\tMerging Opration is not complaited (!)");
             Console.WriteLine("[!][info]\tEnd of logs");
             Console.WriteLine("\n\n" + status + " at:\t" + DateTime.Now.ToString("hh:mm:ss tt") + "\t" + DateTime.Now.ToString("yyyy/MM/dd"));
             Console.WriteLine(status2);
             Console.WriteLine("\n\n\nPress \"R\" key to Restart Or Press any key to Exit");
             Console.WriteLine("\nWaiting for key.....");
-           
+
 
 
             key = Console.ReadKey(true);
-              if (key.KeyChar == 'r' || key.KeyChar == 'R')
-                {
+            if (key.KeyChar == 'r' || key.KeyChar == 'R')
+            {
                 //info = AppDomain.CurrentDomain.BaseDirectory; //app dir
                 //info = Environment.GetCommandLineArgs()[0];
                 //info = Assembly.GetExecutingAssembly().Location;
@@ -365,8 +496,8 @@ class Program
 
             }
             else
-            {   
-                Console.WriteLine("\nExiting..."); 
+            {
+                Console.WriteLine("\nExiting...");
 
                 //exit
                 Thread.Sleep(1000);
