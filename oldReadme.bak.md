@@ -63,15 +63,6 @@ Simply just run it and the App will do Files merging automatically, after that, 
 
 ###### @xMaxrayx @Unbreakable-ray           on 22/6/2023  
 
-# Plans for All-in-one Readme v2.
-
-- Make `Tree` content.
-
-- Clean # title from New line and space.<br>
-
-  <br><br><br><br><br>
-
-  ![all-in-one-v2.drawio](./sub-readme/readme-data/all-in-one-v2.drawio.png)
 <br><br><br>
 
 # Image history (For fun).
@@ -96,7 +87,7 @@ I made `Ico` files for my app.
 
 
 
-Auto-merged at 04:15:12 PM 2023/06/24	@xMaxrayx	@Unbreakable-ray
+Auto-merged at 07:01:59 PM 2023/06/23	@xMaxrayx	@Unbreakable-ray
 
 Auto-merged by "All-in-one" app 
 
